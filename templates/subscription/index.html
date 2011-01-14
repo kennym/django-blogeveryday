@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <p class="tooltip-box-warning">
+    This is currently <b>only</b> a developer preview. You will feel deeply
+    frustrated and emotionally crippled when expecting it to work.<br />
+    <b>We are working day and night making it better. Please, be patient.</b>
+    </p>
+
+    <p>
+    You want to blog every day? Give us your blog URL and that's it!
+    </p>
+
+    <div id="subscription-form">
+        <form method="POST" action="{% url submit_form %}">
+          {{ form.as_p }}
+          <input type="submit" value="It's a deal!" id="submit-button"/>
+        </form>
+    </div>
+{% endblock %}
